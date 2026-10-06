@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkipInsights Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="apple-hero-canvas" aria-label="SkipInsights product demo">
+      <div class="device-perspective-wrap">
+        <div class="browser-window">
+          <div class="chrome-header">
+            <div class="mac-buttons" aria-hidden="true">
+              <span class="dot close"></span>
+              <span class="dot minimize"></span>
+              <span class="dot expand"></span>
+            </div>
+
+            <div class="address-bar">open.spotify.com</div>
+
+            <div class="extension-toolbar" aria-label="SkipInsights extension shortcut">
+              <div class="extension-icon-btn" id="skipInsightsIcon" aria-label="Spotify extension icon" role="button" tabindex="0">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 3v18h18M7 16l4-4 4 4 6-6" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotify-viewport">
+            <div class="mock-sidebar" aria-hidden="true">
+              <div class="sidebar-icon home active"></div>
+              <div class="sidebar-icon search"></div>
+              <div class="sidebar-icon library"></div>
+              <div class="mini-cards">
+                <span class="mini-card purple"></span>
+                <span class="mini-card green"></span>
+                <span class="mini-card gray"></span>
+                <span class="mini-card beige"></span>
+                <span class="mini-card rose"></span>
+                <span class="mini-card blue"></span>
+              </div>
+            </div>
+
+            <div class="mock-main-panel">
+              <div class="mock-album-art"></div>
+              <div class="mock-playlist-rows" aria-hidden="true">
+                <div class="row short"></div>
+                <div class="row long"></div>
+                <div class="row mid"></div>
+              </div>
+            </div>
+
+            <aside class="skip-insights-panel" id="insightsPopup" aria-live="polite">
+              <div class="panel-header">
+                <h4>Skip Insights</h4>
+                <span class="subtitle">Weekly review</span>
+              </div>
+
+              <div class="metrics-grid">
+                <div class="metric-card">
+                  <span class="num">65</span>
+                  <span class="label">This week</span>
+                </div>
+                <div class="metric-card">
+                  <span class="num">84%</span>
+                  <span class="label">Past 50%</span>
+                </div>
+                <div class="metric-card">
+                  <span class="num">49%</span>
+                  <span class="label">Past 75%</span>
+                </div>
+              </div>
+
+              <div class="chart-mock" aria-hidden="true">
+                <div class="bar" style="height: 35%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 55%"></div>
+                <div class="bar" style="height: 94%"></div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="simulated-cursor" id="virtualCursor" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
