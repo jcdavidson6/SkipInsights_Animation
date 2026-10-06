@@ -9,6 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
+  function moveCursorToIcon() {
+    const browserWindow = document.querySelector('.browser-window');
+    let left = 0;
+    let top = 0;
+    let element = icon;
+
+    while (element && element !== browserWindow) {
+      left += element.offsetLeft;
+      top += element.offsetTop;
+      element = element.offsetParent;
+    }
+
+    const cursorHotspotX = 4.5;
+    const cursorHotspotY = 3;
+
+    cursor.style.left = `${left + (icon.offsetWidth / 2) - cursorHotspotX}px`;
+    cursor.style.top = `${top + (icon.offsetHeight / 2) - cursorHotspotY}px`;
+  }
+
   container.addEventListener('mousemove', (event) => {
     const rect = container.getBoundingClientRect();
     const x = event.clientX - rect.left - rect.width / 2;
@@ -33,8 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cursor.style.left = '17%';
 
     setTimeout(() => {
-      cursor.style.left = '92%';
-      cursor.style.top = '7%';
+      moveCursorToIcon();
     }, 1500);
 
     setTimeout(() => {
@@ -53,5 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(runShowcaseLoop, 9500);
   }
 
+  window.addEventListener('resize', moveCursorToIcon);
   runShowcaseLoop();
 });
