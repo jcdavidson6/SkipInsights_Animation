@@ -355,7 +355,7 @@ body {
   z-index: 999;
   top: 68%;
   left: 18%;
-  transition: top 1.2s var(--apple-spring), left 1.2s var(--apple-spring);
+  transition: top 0.8s var(--apple-spring), left 0.8s var(--apple-spring);
 }
 
 @media (max-width: 760px) {

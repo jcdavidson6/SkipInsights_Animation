@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
       moveCursorToIcon();
-    }, 1500);
+    }, 900);
 
     setTimeout(() => {
       icon.classList.add('simulated-hover');
