@@ -63,11 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       popup.classList.add('active');
     }, 3200);
 
-    setTimeout(() => {
-      cursor.style.top = '52%';
-      cursor.style.left = '64%';
-    }, 4500);
-
     setTimeout(runShowcaseLoop, 9500);
   }
 
