@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
       element = element.offsetParent;
     }
 
-    const cursorHotspotX = 4.5;
-    const cursorHotspotY = 3;
+    const cursorHotspotX = 4.5 * (cursor.offsetWidth / 24);
+    const cursorHotspotY = 3 * (cursor.offsetHeight / 24);
 
     cursor.style.left = `${left + (icon.offsetWidth / 2) - cursorHotspotX}px`;
     cursor.style.top = `${top + (icon.offsetHeight / 2) - cursorHotspotY}px`;
